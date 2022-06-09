@@ -15,6 +15,7 @@
  */
 
 import React, { ReactNode } from 'react';
+import { useAnalytics } from '@backstage/core-plugin-api';
 import {
   ResultHighlight,
   SearchDocument,
@@ -34,18 +35,28 @@ type Props = {
   secondaryAction?: ReactNode;
   result: SearchDocument;
   highlight?: ResultHighlight;
+  rank?: number;
   lineClamp?: number;
 };
 
 export const DefaultResultListItem = ({
   result,
   highlight,
+  rank,
   icon,
   secondaryAction,
   lineClamp = 5,
 }: Props) => {
+  const analytics = useAnalytics();
+  const handleClick = () => {
+    analytics.captureEvent('discover', result.title, {
+      attributes: { to: result.location },
+      value: rank,
+    });
+  };
+
   return (
-    <Link to={result.location}>
+    <Link noTrack to={result.location} onClick={handleClick}>
       <ListItem alignItems="center">
         {icon && <ListItemIcon>{icon}</ListItemIcon>}
         <ListItemText

@@ -21,6 +21,7 @@ import { SearchResult as SearchResult_2 } from '@backstage/plugin-search-common'
 export const DefaultResultListItem: ({
   result,
   highlight,
+  rank,
   icon,
   secondaryAction,
   lineClamp,
@@ -29,6 +30,7 @@ export const DefaultResultListItem: ({
   secondaryAction?: ReactNode;
   result: SearchDocument;
   highlight?: ResultHighlight | undefined;
+  rank?: number | undefined;
   lineClamp?: number | undefined;
 }) => JSX.Element;
 
