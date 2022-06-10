@@ -1,5 +1,18 @@
 # @backstage/plugin-search
 
+## 0.9.0-next.3
+
+### Minor Changes
+
+- 2dc4818541: The pre-alpha `<SearchPageNext>`, `<SearchBarNext>`, `etc...` components have been removed. In the unlikely event you were still using/referencing them, please update to using their non-`*Next` equivalents from either `@backstage/plugin-search-react` or `@backstage/plugin-search`.
+
+### Patch Changes
+
+- 8809159148: Components `<DefaultResultListItem>`, `<SearchBar>` (including `<SearchBarBase>`), `<SearchFilter>` (including `.Checkbox`, `.Select`, and `.Autocomplete` static prop components), `<SearchResult>`, and `<SearchResultPager>` are now exported from `@backstage/plugin-search-react`. They are now deprecated in `@backstage/plugin-search` and will be removed in a future release.
+- Updated dependencies
+  - @backstage/plugin-search-react@0.2.1-next.1
+  - @backstage/core-components@0.9.5-next.3
+
 ## 0.8.2-next.2
 
 ### Patch Changes

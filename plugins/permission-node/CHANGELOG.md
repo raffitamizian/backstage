@@ -1,5 +1,16 @@
 # @backstage/plugin-permission-node
 
+## 0.6.2-next.3
+
+### Patch Changes
+
+- 58426f9c0f: Added a new endpoint for aggregating permission metadata from a plugin backend: `/.well-known/backstage/permissions/metadata`
+
+  By default, the metadata endpoint will return information about the permission rules supported by the plugin. Plugin authors can also provide an optional `permissions` parameter to `createPermissionIntegrationRouter`. If provided, these `Permission` objects will be included in the metadata returned by this endpoint. The `permissions` parameter will eventually be required in a future breaking change.
+
+- Updated dependencies
+  - @backstage/backend-common@0.14.0-next.3
+
 ## 0.6.2-next.2
 
 ### Patch Changes

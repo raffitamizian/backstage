@@ -1,5 +1,13 @@
 # @backstage/plugin-search-react
 
+## 0.2.1-next.1
+
+### Patch Changes
+
+- 8809159148: Components `<DefaultResultListItem>`, `<SearchBar>` (including `<SearchBarBase>`), `<SearchFilter>` (including `.Checkbox`, `.Select`, and `.Autocomplete` static prop components), `<SearchResult>`, and `<SearchResultPager>` are now exported from `@backstage/plugin-search-react`. They are now deprecated in `@backstage/plugin-search` and will be removed in a future release.
+- Updated dependencies
+  - @backstage/core-components@0.9.5-next.3
+
 ## 0.2.1-next.0
 
 ### Patch Changes

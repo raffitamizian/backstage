@@ -1,5 +1,24 @@
 # @backstage/create-app
 
+## 0.4.28-next.3
+
+### Patch Changes
+
+- 0e870fe0ac: Removed peer dependencies, as they are no longer needed.
+- 30f04d1497: Components `<DefaultResultListItem>`, `<SearchBar>`, `<SearchFilter>`, and `<SearchResult>` are now deprecated in `@backstage/plugin-search` and should be imported from `@backstage/plugin-search-react` instead.
+
+  To upgrade your App, update the following in `packages/app/src/components/search/SearchPage.tsx`:
+
+  ```diff
+  import {
+    DefaultResultListItem
+    SearchBar
+    SearchFilter
+    SearchResult
+  - } from `@backstage/plugin-search`;
+  + } from `@backstage/plugin-search-react`;
+  ```
+
 ## 0.4.28-next.2
 
 ### Patch Changes
